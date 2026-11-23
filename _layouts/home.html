@@ -11,20 +11,20 @@ layout: default
         class="hero-logo"
       />
       <h1 class="hero-title">{{ site.title }}</h1>
-      <p class="hero-dates">{{ c.fechas_corto }} · Lunes a viernes</p>
-      <p class="hero-format">{{ c.modalidad }} · {{ c.plazas }} plazas</p>
+      <p class="hero-dates">{{ c.fechas_corto }}</p>
+      <p class="hero-format">{{ c.modalidad }} · {{ c.horario_corto }} · {{ c.plazas }} plazas</p>
       <p class="hero-tagline">
         Curso avanzado de bioinformática organizado por la Conexión de Biología
         Computacional y Bioinformática del CSIC, impartido <strong>íntegramente en
-        línea</strong>. Va especialmente dirigido a quienes quieren estar al día de
-        los últimos avances en análisis de datos bioinformáticos. El curso provee
-        material didáctico, por lo que es
+        línea</strong> en siete sesiones. Va especialmente dirigido a quienes quieren
+        estar al día de los últimos avances en análisis de datos bioinformáticos.
+        El curso provee material didáctico, por lo que es
         <strong>ideal para docentes en bioinformática</strong> que deseen actualizar sus asignaturas.
       </p>
       <a href="{{ site.baseurl }}/schedule/" class="btn btn-primary btn-programa">Ver programa</a>
       <p style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
         Matrícula de <strong>{{ c.precio }} por persona</strong>, que incluye el acceso a
-        todas las sesiones en directo, al material docente y al servidor de prácticas.
+        las siete sesiones en directo, al material docente y al entorno de prácticas.
         Las personas socias de la
         <a href="https://www.sebibc.es/" target="_blank" rel="noopener noreferrer">SEBiBC</a>
         tienen un descuento de {{ c.descuento_socios }}. Consulta más detalles
@@ -59,17 +59,19 @@ layout: default
         <div class="card">
           <h2>Qué aprenderás</h2>
           <p>
-            Técnicas avanzadas de bioinformática, buenas prácticas para diseñar
-            asignaturas y cómo organizar sesiones teóricas y prácticas efectivas.
+            Siete temas avanzados de bioinformática, de la mano de quien trabaja en
+            cada uno: ensamblado de genomas, estructura de proteínas, célula única,
+            transcriptómica espacial y de lecturas largas, biología de sistemas y
+            análisis multi-ómico.
           </p>
         </div>
         <div class="card">
           <h2>Requisitos previos</h2>
           <p>
             Familiaridad con la línea de comandos y con conceptos básicos de
-            bioinformática. Para seguir el curso basta con un navegador
-            actualizado, auriculares y buena conexión: las prácticas se hacen en
-            un servidor remoto, sin instalar nada. Más detalles en la página de
+            bioinformática. Para seguir el curso hacen falta una <strong>cuenta de
+            Google</strong>, un navegador actualizado, auriculares y buena conexión.
+            Más detalles en la página de
             <a href="{{ site.baseurl }}/logistics/">Logística</a>.
           </p>
         </div>
@@ -77,37 +79,40 @@ layout: default
     </div>
   </section>
 
-  <section class="aula-virtual-cta">
+  <section class="schedule-overview">
     <div class="container">
-      <h2>El curso sucede en el Aula Virtual</h2>
-      <p>
-        Al ser una edición en línea, el {{ c.moodle_nombre }} no es un complemento:
-        es el aula. Desde ahí se entra a las clases en directo por videoconferencia,
-        se descargan las diapositivas y los cuadernos de prácticas, se accede al
-        servidor donde se trabaja y se entregan las actividades.
-      </p>
-      <p>
-        Las personas inscritas reciben sus credenciales antes del comienzo del curso.
-        Los enlaces a las sesiones no se publican en esta web: se entra siempre
-        desde el aula.
-      </p>
-      <p>
-        <a href="{{ site.baseurl }}/aula-virtual/" class="btn btn-secondary">Cómo funciona</a>
-      </p>
+      <h2>Las siete sesiones</h2>
+      <ol class="sesion-list">
+        {% for s in site.data.sesiones %}
+        <li>
+          <a href="{{ site.baseurl }}/sesion{{ s.num }}/">
+            <span class="sesion-list-fecha">{{ s.fecha }}</span>
+            <span class="sesion-list-tema">{{ s.tema }}</span>
+            <span class="sesion-list-ponente">{{ s.ponente }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ol>
+      <p><a href="{{ site.baseurl }}/schedule/" class="btn btn-secondary">Programa completo</a></p>
     </div>
   </section>
 
-  <section class="schedule-overview">
+  <section class="classroom-cta">
     <div class="container">
-      <h2>Semana de un vistazo</h2>
-      <ul class="day-links">
-        <li><a href="{{ site.baseurl }}/day1-monday/">Día 1 — {{ c.dia1 }}</a></li>
-        <li><a href="{{ site.baseurl }}/day2-tuesday/">Día 2 — {{ c.dia2 }}</a></li>
-        <li><a href="{{ site.baseurl }}/day3-wednesday/">Día 3 — {{ c.dia3 }}</a></li>
-        <li><a href="{{ site.baseurl }}/day4-thursday/">Día 4 — {{ c.dia4 }}</a></li>
-        <li><a href="{{ site.baseurl }}/day5-friday/">Día 5 — {{ c.dia5 }}</a></li>
-      </ul>
-      <p><a href="{{ site.baseurl }}/schedule/" class="btn btn-secondary">Programa completo</a></p>
+      <h2>El curso sucede en Google Classroom</h2>
+      <p>
+        Las clases se dan en directo por <strong>Google Meet</strong>, y se entra desde
+        <strong>Google Classroom</strong>, donde está también todo el material: diapositivas,
+        cuadernos de prácticas, datos y entrega de actividades.
+      </p>
+      <p>
+        El acceso es por invitación. Las personas admitidas la reciben por correo
+        electrónico en la cuenta de Google que indiquen al preinscribirse; los enlaces
+        de las sesiones no se publican en esta web.
+      </p>
+      <p>
+        <a href="{{ site.baseurl }}/classroom/" class="btn btn-secondary">Cómo funciona</a>
+      </p>
     </div>
   </section>
 

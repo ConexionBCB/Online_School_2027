@@ -1,0 +1,88 @@
+# =============================================================================
+# Calendario de la Escuela de Invierno 2027
+# =============================================================================
+# ESTE FICHERO ES LA ÚNICA FUENTE DEL CALENDARIO. La portada, el programa, las
+# páginas de cada sesión y la tira de navegación entre sesiones se generan de
+# aquí. Si cambia una fecha o un ponente, se cambia aquí y en ningún otro sitio.
+#
+# Campos:
+#   num      número de sesión (1–7), usado por pages/sesionN.md
+#   fecha        texto completo, p.ej. "Martes 9 de marzo"
+#   fecha_corta  etiqueta corta en español para la tira de sesiones ("9 mar").
+#                Se escribe a mano a propósito: el filtro `date` de Jekyll usa
+#                la configuración regional del sistema y devolvería "9 Mar".
+#   iso      fecha en formato AAAA-MM-DD (para ordenar y para el calendario)
+#   ponente  nombre tal y como aparece en _data/profesorado.yml
+#   tema     título de la sesión
+#   web      página del ponente (opcional)
+#   foto     fichero en assets/img/profesorado/ (opcional)
+#
+# Todas las sesiones son de 15:00 a 18:30 (CET). El horario detallado dentro de
+# la sesión está en _layouts/sesion.html, que es común a las siete.
+#
+# NOTA: no hay sesiones el 23 ni el 25 de marzo porque es Semana Santa
+# (Domingo de Pascua: 28 de marzo de 2027).
+# -----------------------------------------------------------------------------
+
+- num: 1
+  fecha: "Martes 9 de marzo"
+  fecha_corta: "9 mar"
+  iso: 2027-03-09
+  ponente: "Aureliano Bombarely"
+  tema: "Ensamblado de genomas"
+  web: "https://bombarelylab.com/"
+  foto: aureliano_bombarely.webp
+
+- num: 2
+  fecha: "Jueves 11 de marzo"
+  fecha_corta: "11 mar"
+  iso: 2027-03-11
+  ponente: "Juan Fernández-Recio"
+  tema: "AlphaFold y predicción de estructura de proteínas"
+  web: "https://www.icvv.es/english/3dbiowine"
+  foto: Juan-Fdez-Recio.jpg
+
+- num: 3
+  fecha: "Martes 16 de marzo"
+  fecha_corta: "16 mar"
+  iso: 2027-03-16
+  ponente: "Javier De Las Rivas"
+  tema: "Análisis de célula única (single-cell)"
+  web: "http://bioinfow.dep.usal.es/"
+  foto: JavierDeLasRivas.png
+
+- num: 4
+  fecha: "Jueves 18 de marzo"
+  fecha_corta: "18 mar"
+  iso: 2027-03-18
+  ponente: "Daniel Jesús García García"
+  tema: "Transcriptómica espacial"
+  web: "https://www.ipb.csic.es/servicios/Bioinformatica/index.html"
+  foto: Daniel.png
+
+- num: 5
+  fecha: "Martes 30 de marzo"
+  fecha_corta: "30 mar"
+  iso: 2027-03-30
+  ponente: "Ana Conesa"
+  tema: "Transcriptómica de lecturas largas"
+  web: "https://conesalab.uv.es/"
+  foto: ana_conesa.webp
+
+- num: 6
+  fecha: "Jueves 1 de abril"
+  fecha_corta: "1 abr"
+  iso: 2027-04-01
+  ponente: "Arnau Montagud"
+  tema: "Modelos para biología de sistemas"
+  web: "https://arnaumontagud.netlify.app/"
+  foto: arnau_montagud.jpg
+
+- num: 7
+  fecha: "Martes 6 de abril"
+  fecha_corta: "6 abr"
+  iso: 2027-04-06
+  ponente: "Ian Morilla"
+  tema: "Análisis multi-ómico"
+  web: "https://mlimowebsite.faculty.bio/"
+  foto: ianmorrilla.png

@@ -3,33 +3,33 @@
 Sitio web y materiales de la Escuela de Invierno organizada por la Conexión de
 Biología Computacional y Bioinformática del CSIC.
 
-**Esta edición es 100 % en línea**, con un máximo de 30 participantes. Todas las
-sesiones se imparten por videoconferencia desde el Aula Virtual (Moodle).
+**Edición 100 % en línea**, con un máximo de 30 participantes. Siete sesiones,
+martes y jueves de 15:00 a 18:30 (CET), del 9 de marzo al 6 de abril de 2027.
+Las clases se imparten por **Google Meet** y se entra desde **Google Classroom**.
 
 Sitio publicado: https://conexionbcb.github.io/Winter_School_2027/
 
-Este repositorio parte de la [Escuela de Verano 2026](https://github.com/ConexionBCB/Summer_School_2026),
-con el contenido de aquella edición conservado como punto de partida y marcado
-para revisión.
+Este repositorio parte de la [Escuela de Verano 2026](https://github.com/ConexionBCB/Summer_School_2026).
 
 ---
 
-## Lo primero: rellenar los datos del curso
+## Los dos ficheros que hay que editar
 
-Casi todo lo que cambia entre ediciones —fechas, sede, precios, plazos, enlace
-al Aula Virtual— está centralizado en el bloque `curso:` de **`_config.yml`**.
-Editándolo se actualizan a la vez la portada, el programa y la página de
-logística.
+Casi todo lo que cambia entre ediciones está en dos sitios, y en ningún otro:
 
-Lo que queda pendiente está marcado con `[TBC]`. Para ver todo lo que falta:
+| Fichero | Qué contiene |
+|---|---|
+| **`_config.yml`** → bloque `curso:` | Precio, plazos, enlaces a Classroom y al formulario, zona horaria, contacto |
+| **`_data/sesiones.yml`** | **El calendario**: fecha, ponente y tema de las siete sesiones |
+
+El calendario es la única fuente para la portada, el programa, las páginas de
+cada sesión y la navegación entre ellas. Si cambia una fecha, se cambia ahí y el
+sitio entero se actualiza.
+
+Lo que queda pendiente está marcado con `[TBC]`:
 
 ```bash
-grep -rn "TBC" --exclude-dir=.git .
-```
-
-Y los comentarios dirigidos a la organización:
-
-```bash
+grep -rn "TBC" --exclude-dir=.git .          # lo que falta por rellenar
 grep -rn "TODO (organización)" --exclude-dir=.git .
 ```
 
@@ -37,43 +37,40 @@ grep -rn "TODO (organización)" --exclude-dir=.git .
 
 | Ruta | Qué es |
 |---|---|
-| `_config.yml` | **Datos del curso y navegación. Empieza aquí.** |
+| `_config.yml` | Datos del curso y navegación |
+| `_data/sesiones.yml` | Calendario de las siete sesiones |
+| `_data/profesorado.yml` | Profesorado (página de Organización) |
+| `_data/organizadores.yml` | Equipo organizador |
+| `_data/patrocinadores.yml` | Entidades patrocinadoras |
 | `index.md` | Página de inicio |
-| `pages/` | Programa, una página por día, Aula Virtual, organización y logística |
-| `_data/*.yml` | Listas de profesorado, organizadores y patrocinadores |
-| `materials/dayN/` | Material de cada día, con una subcarpeta por ponente |
+| `pages/sesion1.md` … `sesion7.md` | Una página por sesión (cortas: los datos vienen del calendario) |
+| `pages/schedule.md` | Programa |
+| `pages/classroom.md` | Cómo se accede a Classroom y Meet |
+| `pages/organizacion.md`, `pages/logistics.md` | Organización y logística |
+| `materials/sesionN/` | Material de cada sesión, una subcarpeta por ponente |
 | `materials/_plantilla-ponente/` | Plantilla de README para cada ponente |
-| `_layouts/` | Plantillas Jekyll |
+| `_layouts/sesion.html` | Plantilla común de las siete sesiones |
 | `assets/css/style.css` | Estilos |
-| `docs/moodle/` | Notas sobre el Aula Virtual (no se publican) |
-| `CONTRIBUTING.md` | **Guía para el profesorado: cómo subir material** |
+| `CONTRIBUTING.md` | **Guía para el profesorado: cómo subir material y dar la sesión** |
 
-## Aula Virtual (Moodle) y videoconferencia
+## Google Classroom y Google Meet
 
-Al ser el curso en línea, el Moodle **es el aula**: desde ahí se entra a las
-clases en directo. El sitio web es estático y no puede alojar Moodle; lo
-**enlaza**. La página `/aula-virtual/` y el botón de la portada leen
-`curso.moodle_url` de `_config.yml`: mientras esté vacío muestran un aviso de
-"próximamente", y en cuanto se rellene aparece el enlace. Igual con
-`curso.videoconferencia` y `curso.grabaciones`. No hay que editar ninguna página.
+El sitio web es estático: **enlaza** a Classroom, no lo contiene. La página
+`/classroom/` y los botones leen `curso.classroom_url` de `_config.yml`.
+Mientras esté vacío se muestra un aviso de "próximamente" en lugar de un enlace
+roto; en cuanto se rellene, aparecen los botones. No hay que editar ninguna
+página.
 
-Los enlaces de las sesiones **no se publican en esta web**: se entra siempre
-desde el aula, para que solo accedan las personas inscritas.
+Los enlaces de las sesiones y el código de la clase **no se publican en esta
+web**: el acceso es por invitación a la cuenta de Google que cada persona indica
+al preinscribirse.
 
-La documentación de decisión está en [`docs/moodle/`](docs/moodle/):
+## Añadir una sesión o cambiar un ponente
 
-- [01 — Opciones de alojamiento](docs/moodle/01-opciones-de-alojamiento.md)
-- [02 — Estructura del aula](docs/moodle/02-estructura-del-aula.md): secciones,
-  roles y permisos por ponente
-- [03 — Videoconferencia](docs/moodle/03-videoconferencia.md): elección de
-  plataforma para las clases en directo
-
-## Para el profesorado
-
-Si impartes una sesión, lee [`CONTRIBUTING.md`](CONTRIBUTING.md): explica qué
-material va en este repositorio, qué va en el Aula Virtual, cómo subir cada cosa
-(con y sin git) y **cómo preparar una sesión en línea** — tamaño de letra en la
-terminal, puntos de control en las prácticas, ritmo y pausas.
+1. Edita la entrada en `_data/sesiones.yml`.
+2. Si es una sesión nueva, crea `pages/sesionN.md` copiando otra (solo cambian
+   `title`, `permalink` y `sesion:`) y la carpeta `materials/sesionN/`.
+3. Si cambia el profesorado, actualiza también `_data/profesorado.yml`.
 
 ## Ver el sitio en local
 
@@ -89,12 +86,11 @@ Y abrir http://localhost:4000/Winter_School_2027/
 GitHub Pages construye el sitio automáticamente al hacer push a `main`. En
 **Settings › Pages**, seleccionar *Deploy from a branch* → `main` → `/ (root)`.
 
-Si el repositorio se renombra, hay que actualizar `baseurl` en `_config.yml`
-para que coincida con el nombre nuevo, o los enlaces y los estilos se romperán.
+Si el repositorio se renombra, hay que actualizar `baseurl` en `_config.yml` para
+que coincida, o los enlaces y los estilos se romperán.
 
 ## Licencia
 
 <!-- TODO (organización): elegir licencia. Sugerencia: CC BY 4.0 para los
-     contenidos y MIT para el código del sitio, igual que es habitual en
-     material docente reutilizable. -->
+     contenidos y MIT para el código del sitio. -->
 Pendiente de definir.

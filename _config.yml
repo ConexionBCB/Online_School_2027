@@ -1,78 +1,76 @@
 # =============================================================================
 # Escuela de Invierno en Bioinformática Avanzada 2027
 # =============================================================================
-# EDITA ESTE FICHERO PRIMERO. Los valores del bloque `curso:` se usan en
-# varias páginas a la vez (inicio, logística, pie de página), así que
+# EDITA ESTE FICHERO PRIMERO. Los valores del bloque `curso:` se usan en varias
+# páginas a la vez (inicio, programa, logística, pie de página), así que
 # cambiándolos aquí se actualiza todo el sitio.
 #
-# Todo lo marcado como "[TBC]" está pendiente de confirmar. Busca "TBC" en
-# todo el repositorio para localizar lo que queda por rellenar:
-#     grep -rn "TBC" .
+# EL CALENDARIO NO ESTÁ AQUÍ: está en `_data/sesiones.yml` (fechas, ponentes y
+# temas de las siete sesiones). Ese fichero es su única fuente.
+#
+# Todo lo marcado como "[TBC]" está pendiente de confirmar. Para localizarlo:
+#     grep -rn "TBC" --exclude-dir=.git .
 # =============================================================================
 
 title: "Escuela de Invierno en Bioinformática Avanzada 2027"
 description: "Curso avanzado de bioinformática 100 % en línea sobre métodos modernos de análisis de datos, pensado para profesionales y estudiantes que quieren actualizarse y, en particular, para docentes que deseen renovar sus asignaturas."
 
 # IMPORTANTE: `baseurl` debe coincidir con el nombre del repositorio en GitHub.
-# Si el repositorio se llama Winter_School_2027, deja el valor tal cual.
 baseurl: "/Winter_School_2027"
 url: "https://conexionbcb.github.io"
 
 # -----------------------------------------------------------------------------
-# Datos del curso (usados en varias páginas)
+# Datos del curso
 # -----------------------------------------------------------------------------
 curso:
   # URL del repositorio en GitHub. Se usa para enlazar las carpetas de
-  # materiales (GitHub muestra el README de cada carpeta; GitHub Pages no sabe
-  # servir un índice de directorio, así que los enlaces van a GitHub).
+  # materiales y la guía del profesorado.
   # ¡Actualízala si mueves el repositorio a otra cuenta u organización!
   repo_url: "https://github.com/ConexionBCB/Winter_School_2027"
 
-  # Fechas --------------------------------------------------------------------
-  fechas_corto: "[TBC] de 2027"              # p.ej. "25–29 de enero"
-  fechas_largo: "[TBC] de 2027 (de lunes a viernes)"
-  dia1: "[TBC]"                              # p.ej. "Lunes 25 de enero"
-  dia2: "[TBC]"
-  dia3: "[TBC]"
-  dia4: "[TBC]"
-  dia5: "[TBC]"
-
   # Formato -------------------------------------------------------------------
-  # Esta edición es 100 % en línea: no hay sede física ni alojamiento.
   modalidad: "100 % en línea"
-  plazas: "30"                               # nº máximo de participantes
+  plazas: "30"
   # Zona horaria de referencia de los horarios publicados. Imprescindible
-  # indicarla: habrá participantes en husos distintos.
+  # indicarla: puede haber participantes en husos distintos.
   zona_horaria: "CET (hora peninsular española)"
 
+  # Horario de las sesiones ---------------------------------------------------
+  # Las siete sesiones son en martes y jueves, todas con el mismo horario.
+  horario_corto: "martes y jueves, de 15:00 a 18:30"
+  hora_inicio: "15:00"
+  hora_fin: "18:30"
+
+  # Fechas (resumen; el calendario completo está en _data/sesiones.yml) -------
+  fechas_corto: "9 de marzo – 6 de abril de 2027"
+  fechas_largo: "del 9 de marzo al 6 de abril de 2027, en siete sesiones"
+
   # Matrícula -----------------------------------------------------------------
-  # Al ser en línea desaparecen alojamiento y manutención, así que el precio
-  # de la edición de verano (500 €) no sirve de referencia.
+  # Al ser en línea no hay alojamiento ni manutención, así que el precio de la
+  # edición de verano (500 €) no sirve de referencia.
   precio: "[TBC]"                            # p.ej. "150 €"
   precio_socios: "[TBC]"                     # precio final para socias/os SEBiBC
   descuento_socios: "[TBC]"                  # p.ej. "25 €"
 
   # Plazos --------------------------------------------------------------------
-  preinscripcion_cierre: "[TBC]"             # p.ej. "14 de noviembre de 2026"
-  # Deja `preinscripcion_url` vacío mientras el formulario no exista: el botón
-  # de preinscripción se oculta automáticamente y no se publican enlaces rotos.
+  preinscripcion_cierre: "31 de enero de 2027"
+  # Deja `preinscripcion_url` VACÍO hasta que el formulario esté activo: el
+  # botón de preinscripción se oculta y no se publica un enlace roto.
   preinscripcion_url: ""
 
-  # Aula virtual (Moodle) -----------------------------------------------------
-  # Deja vacío hasta que el Moodle esté en marcha. Mientras esté vacío, la
-  # página "Aula Virtual" muestra un aviso de "próximamente" en lugar del botón
-  # de acceso. Ver docs/moodle/ para decidir el alojamiento.
-  moodle_url: ""
-  moodle_nombre: "Aula Virtual de la Escuela de Invierno"
+  # Aula del curso: Google Classroom --------------------------------------------
+  # Deja vacío hasta que la clase esté creada. Mientras esté vacío, la página
+  # "Classroom" muestra un aviso de "próximamente" en lugar del botón.
+  # El acceso es por invitación: el código de la clase NO se publica en la web.
+  classroom_url: ""
+  classroom_nombre: "Google Classroom de la Escuela de Invierno"
 
-  # Videoconferencia ----------------------------------------------------------
-  # Siendo el curso 100 % en línea, las clases se dan por videoconferencia
-  # DESDE DENTRO del aula virtual (no se publican enlaces de reunión en la web:
-  # eso evita que personas no inscritas entren en las sesiones).
-  # Ver docs/moodle/03-videoconferencia.md para elegir plataforma.
-  videoconferencia: "[TBC]"                  # p.ej. "BigBlueButton" o "Zoom"
-  # ¿Se graban las sesiones? Afecta al consentimiento que hay que pedir y al
-  # almacenamiento necesario. Valores: "sí", "no", "[TBC]"
+  # Videoconferencia: Google Meet ---------------------------------------------
+  # Las clases se imparten con el enlace de Meet propio de la clase, al que se
+  # entra desde Classroom. El enlace no se publica en la web.
+  videoconferencia: "Google Meet"
+  # ¿Se graban las sesiones? Afecta al consentimiento que hay que pedir en la
+  # preinscripción. Valores: "sí", "no", "[TBC]"
   grabaciones: "[TBC]"
 
   # Contacto ------------------------------------------------------------------
@@ -80,24 +78,16 @@ curso:
 
 # -----------------------------------------------------------------------------
 # Navegación (etiqueta, ruta relativa a baseurl)
+# Las siete sesiones NO van aquí: se generan desde _data/sesiones.yml y
+# aparecen como una tira de fechas en el programa y en cada sesión.
 # -----------------------------------------------------------------------------
 nav:
   - label: Inicio
     path: /
   - label: Programa
     path: /schedule/
-  - label: Aula Virtual
-    path: /aula-virtual/
-  - label: Día 1
-    path: /day1-monday/
-  - label: Día 2
-    path: /day2-tuesday/
-  - label: Día 3
-    path: /day3-wednesday/
-  - label: Día 4
-    path: /day4-thursday/
-  - label: Día 5
-    path: /day5-friday/
+  - label: Classroom
+    path: /classroom/
   - label: Organización
     path: /organizacion/
   - label: Logística
@@ -112,5 +102,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - CONTRIBUTING.md
-  - docs/
+  - scripts/
   - vendor/

@@ -278,27 +278,6 @@ body {
   margin: 0 0 var(--space-lg);
 }
 
-.day-links {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-lg);
-}
-
-.day-links li {
-  margin-bottom: var(--space-sm);
-}
-
-.day-links a {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.day-links a:hover {
-  text-decoration: underline;
-  color: var(--color-accent);
-}
-
 /* Profesorado / Organización (home + página Organización) */
 .profesorado-overview {
   padding: var(--space-2xl) 0;
@@ -612,7 +591,7 @@ body {
   margin: 0 0 var(--space-lg);
 }
 
-/* Aviso de "pendiente / próximamente" (preinscripción, Aula Virtual) */
+/* Aviso de "pendiente / próximamente" (preinscripción, Classroom) */
 .notice {
   margin: var(--space-md) 0;
   padding: var(--space-md) var(--space-lg);
@@ -633,20 +612,20 @@ body {
   max-width: 44rem;
 }
 
-/* Llamada al Aula Virtual en la portada */
-.aula-virtual-cta {
+/* Llamada a Classroom en la portada */
+.classroom-cta {
   padding: var(--space-2xl) 0;
   background: var(--color-bg);
   border-top: 1px solid var(--color-border);
 }
 
-.aula-virtual-cta h2 {
+.classroom-cta h2 {
   font-size: 1.25rem;
   color: var(--color-primary);
   margin: 0 0 var(--space-md);
 }
 
-.aula-virtual-cta p {
+.classroom-cta p {
   margin: 0 0 var(--space-md);
   max-width: 44rem;
 }
@@ -672,4 +651,184 @@ body {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------------
+   Sesiones (edición 2027: siete sesiones en fechas sueltas)
+   --------------------------------------------------------------------------- */
+
+/* Tira de navegación entre sesiones */
+.sesion-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-xl);
+}
+
+.sesion-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4.25rem;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.sesion-chip:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.sesion-chip.is-current {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.sesion-chip-num {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sesion-chip-fecha {
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Ficha del ponente en la página de la sesión */
+.ponente-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin: 0 0 var(--space-xl);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  background: var(--color-bg-card);
+}
+
+.ponente-box-foto {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ponente-box-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.ponente-box-nombre {
+  margin: 0.1rem 0 0.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.ponente-box p:last-child { margin-bottom: 0; }
+
+.nota-horario {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Anterior / siguiente */
+.sesion-prevnext {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.sesion-prevnext a { text-decoration: none; }
+.sesion-prevnext a:hover { text-decoration: underline; }
+.sesion-next { margin-left: auto; text-align: right; }
+
+/* Lista de sesiones en la portada */
+.sesion-list {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  counter-reset: sesion;
+}
+
+.sesion-list li {
+  counter-increment: sesion;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sesion-list li:first-child { border-top: 1px solid var(--color-border); }
+
+.sesion-list a {
+  display: grid;
+  grid-template-columns: 11rem 1fr auto;
+  gap: var(--space-md);
+  align-items: baseline;
+  padding: var(--space-md) var(--space-sm);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.sesion-list a:hover { background: var(--color-bg); }
+
+.sesion-list a::before {
+  content: "S" counter(sesion);
+  display: none;
+}
+
+.sesion-list-fecha {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.sesion-list-tema { font-weight: 600; }
+
+.sesion-list-ponente {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .sesion-list a {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+  .sesion-list-ponente { white-space: normal; }
+  .ponente-box { flex-direction: column; align-items: flex-start; }
+}
+
+/* Afiliación y marcador sin foto en la página de Organización */
+.person-afiliacion {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+}
+
+.person-photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-light);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: var(--font-serif, serif);
 }

@@ -37,11 +37,18 @@ layout: default
       <div class="person-grid">
         {% for o in orgs %}
         <div class="person-card">
-          {% if o.foto %}
+          {% if o.foto and o.foto != '' %}
           <img src="{{ site.baseurl }}/assets/img/organizadores/{{ o.foto }}" alt="{{ o.nombre }}" class="person-photo" />
+          {% else %}
+          <div class="person-photo person-photo--placeholder" aria-hidden="true">
+            {{ o.nombre | truncate: 1, "" }}
+          </div>
           {% endif %}
           <h3 class="person-name">{{ o.nombre }}</h3>
           <p class="person-rol">{{ o.rol }}</p>
+          {% if o.afiliacion and o.afiliacion != '' %}
+          <p class="person-afiliacion">{{ o.afiliacion }}</p>
+          {% endif %}
           {% if o.web %}
           <p><a href="{{ o.web }}" target="_blank" rel="noopener noreferrer">Página web</a></p>
           {% endif %}

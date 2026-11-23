@@ -2,32 +2,31 @@
 # Equipo organizador de la Escuela de Invierno 2027
 # =============================================================================
 # Campos: nombre, rol, afiliación, foto (en assets/img/organizadores/),
-#         web (opcional).
+#         web (opcional). OJO: la clave es `afiliacion`, SIN tilde: Liquid no
+#         admite caracteres acentuados en el acceso con punto (o.afiliacion).
 #
-# Igual que con el profesorado: publica únicamente a quienes hayan confirmado
-# su participación en esta edición. Abajo está, comentado, el equipo de la
-# edición de verano 2026 (sus fotos ya están en assets/img/organizadores/).
+# Las entradas pueden ser personas o unidades/servicios (en ese caso se deja
+# `foto` vacío, o se añade un logotipo a assets/img/organizadores/).
 # -----------------------------------------------------------------------------
 
-- nombre: "[TBC] Nombre"
-  rol: "[TBC] Dirección científica / Coordinación"
-  afiliación: "[TBC] Centro"
-  foto: ""
-  web: ""
+- nombre: Ana Barra
+  rol: Coordinadora
+  afiliacion: Consejo Superior de Investigaciones Científicas (CSIC)
+  foto: Ana_Barra.jpg
+  web: https://www.csic.es/
 
-# --- Equipo de la edición de verano 2026 ------------------------------------
-# - nombre: Carolina Monzó
-#   rol: Directora Científica
-#   afiliación: Instituto de Biología Integrativa de Sistemas (I2SysBio-CSIC)
-#   foto: CarolMonzoPictureProfile_small.jpeg
-#   web: https://carolinamonzo.github.io/
-# - nombre: Ana Barra
-#   rol: Coordinadora
-#   afiliación: Consejo Superior de Investigaciones Científicas (CSIC)
-#   foto: Ana_Barra.jpg
-#   web: https://www.csic.es/
-# - nombre: Pedro Braña Coto
-#   rol: Coordinador local
-#   afiliación: Centro de Física de Materiales (CFM-CSIC)
-#   foto: pedro_brana.webp
-#   web: https://theosim.com/
+- nombre: Sebastián E. Ramos-Onsins
+  rol: Dirección científica
+  # TODO (organización): confirmar el rol exacto con el que quiere aparecer.
+  afiliacion: Centre de Recerca en Agrigenòmica (CRAG, CSIC-IRTA-UAB-UB)
+  foto: ""
+  web: https://sites.google.com/view/sebas-ramos-onsins-lab/team
+
+- nombre: Unidad de Bioinformática del CRAG
+  rol: Soporte bioinformático y técnico
+  # TODO (organización): confirmar el rol y si quieren aparecer con logotipo.
+  # Para añadirlo: copiar el fichero a assets/img/organizadores/ y poner su
+  # nombre en el campo `foto`.
+  afiliacion: Centre de Recerca en Agrigenòmica (CRAG)
+  foto: ""
+  web: https://www.cragenomica.es/es/core-facility/unidad-de-bioinformatica

@@ -8,26 +8,65 @@ permalink: /schedule/
   <img src="{{ site.baseurl }}/assets/img/logos/logo_auxiliar.svg" alt="Conexión BCB" class="page-logo-small" />
 </p>
 
-Resumen de la semana. Cada día tiene su propia página con el horario detallado,
-los temas y enlaces a los materiales teóricos y prácticos.
+{%- assign c = site.curso -%}
 
-Todas las sesiones son **{{ site.curso.modalidad }}** y los horarios están en
-**{{ site.curso.zona_horaria }}**.
+Siete sesiones, {{ c.horario_corto }}, {{ c.fechas_largo }}.
+Todas las sesiones son **{{ c.modalidad }}** y los horarios están en
+**{{ c.zona_horaria }}**.
 
-<!-- TODO (organización): completar la columna "Tema principal" cuando se
-     cierre el programa, y las fechas en `_config.yml` (bloque `curso:`). -->
+<!-- El calendario se genera desde _data/sesiones.yml. Para cambiar una fecha,
+     un ponente o un tema, edita ese fichero: esta tabla se actualiza sola. -->
 
-| Día       | Fecha                   | Tema principal | Enlace |
-|-----------|-------------------------|----------------|--------|
-| Lunes     | {{ site.curso.dia1 }}   | Bienvenida, recursos para la docencia, conferencia invitada | [Día 1]({{ site.baseurl }}/day1-monday/) |
-| Martes    | {{ site.curso.dia2 }}   | **[TBC]** | [Día 2]({{ site.baseurl }}/day2-tuesday/) |
-| Miércoles | {{ site.curso.dia3 }}   | **[TBC]** | [Día 3]({{ site.baseurl }}/day3-wednesday/) |
-| Jueves    | {{ site.curso.dia4 }}   | **[TBC]** | [Día 4]({{ site.baseurl }}/day4-thursday/) |
-| Viernes   | {{ site.curso.dia5 }}   | **[TBC]** y cierre del curso | [Día 5]({{ site.baseurl }}/day5-friday/) |
+<table class="schedule-table">
+  <thead>
+    <tr>
+      <th>Sesión</th>
+      <th>Fecha</th>
+      <th>Tema</th>
+      <th>Ponente</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in site.data.sesiones %}
+    <tr>
+      <td><a href="{{ site.baseurl }}/sesion{{ s.num }}/">S{{ s.num }}</a></td>
+      <td>{{ s.fecha }}</td>
+      <td><a href="{{ site.baseurl }}/sesion{{ s.num }}/">{{ s.tema }}</a></td>
+      <td>{{ s.ponente }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+> No hay sesiones el 23 ni el 25 de marzo: es Semana Santa (Domingo de Pascua,
+> 28 de marzo de 2027).
+
+## Horario de cada sesión
+
+Las siete sesiones siguen la misma estructura:
+
+| Hora        | Contenido          |
+|-------------|--------------------|
+| 15:00–16:30 | Teoría             |
+| 16:30–16:45 | Pausa              |
+| 16:45–18:15 | Práctica guiada    |
+| 18:15–18:30 | Dudas y cierre     |
 {: .schedule-table }
 
-Las clases en directo y todo el material se encuentran en el
-[Aula Virtual]({{ site.baseurl }}/aula-virtual/).
+El reparto interno entre teoría y práctica lo ajusta cada ponente; la hora de
+inicio y de fin son fijas.
 
-Para información sobre requisitos técnicos, matrícula y contacto, consulta la
-página de [Logística]({{ site.baseurl }}/logistics/).
+## Actividad para reconocimiento de ECTS
+
+A lo largo del curso, cada participante podrá preparar un **syllabus breve**
+sobre uno de los temas tratados. Esta actividad es necesaria para la
+**obtención de créditos ECTS**. Los criterios de evaluación y la plantilla se
+explican en la primera sesión, y la entrega se realiza en
+[Classroom]({{ site.baseurl }}/classroom/).
+
+## Dónde está todo
+
+Las clases en directo y todo el material se encuentran en
+[Classroom]({{ site.baseurl }}/classroom/). Para información sobre requisitos
+técnicos, matrícula y contacto, consulta la página de
+[Logística]({{ site.baseurl }}/logistics/).

@@ -1,0 +1,114 @@
+---
+layout: default
+---
+{%- comment -%}
+  Layout común de las siete sesiones. Toma los datos de _data/sesiones.yml
+  usando `sesion:` del front matter de la página (pages/sesionN.md), de modo
+  que las fechas, los ponentes y los temas no se repiten en ningún otro sitio.
+{%- endcomment -%}
+{%- assign s = site.data.sesiones | where: "num", page.sesion | first -%}
+{%- assign c = site.curso -%}
+
+<article class="page-content page-sesion">
+  <div class="container">
+    <p class="breadcrumb">{{ site.title }} · Sesión {{ s.num }}</p>
+
+    <h1 class="page-title">Sesión {{ s.num }} — {{ s.tema }}</h1>
+    <p class="page-date">{{ s.fecha }} de 2027 · {{ c.hora_inicio }}–{{ c.hora_fin }} · {{ c.zona_horaria }}</p>
+
+    {%- comment -%} Tira de navegación entre las siete sesiones {%- endcomment -%}
+    <nav class="sesion-strip" aria-label="Sesiones del curso">
+      {% for otra in site.data.sesiones %}
+      <a href="{{ site.baseurl }}/sesion{{ otra.num }}/"
+         class="sesion-chip{% if otra.num == s.num %} is-current{% endif %}"
+         {% if otra.num == s.num %}aria-current="page"{% endif %}>
+        <span class="sesion-chip-num">S{{ otra.num }}</span>
+        <span class="sesion-chip-fecha">{{ otra.fecha_corta }}</span>
+      </a>
+      {% endfor %}
+    </nav>
+
+    <div class="page-body">
+      <div class="ponente-box">
+        {% if s.foto %}
+        <img src="{{ site.baseurl }}/assets/img/profesorado/{{ s.foto }}" alt="{{ s.ponente }}" class="ponente-box-foto" />
+        {% endif %}
+        <div>
+          <p class="ponente-box-label">Imparte</p>
+          <p class="ponente-box-nombre">{{ s.ponente }}</p>
+          {% if s.web %}
+          <p><a href="{{ s.web }}" target="_blank" rel="noopener noreferrer">Página del ponente</a></p>
+          {% endif %}
+        </div>
+      </div>
+
+      <h2>Horario de la sesión</h2>
+
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Hora</th><th>Contenido</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>15:00–16:30</td><td>Teoría — {{ s.tema }}</td></tr>
+          <tr><td>16:30–16:45</td><td>Pausa</td></tr>
+          <tr><td>16:45–18:15</td><td>Práctica guiada</td></tr>
+          <tr><td>18:15–18:30</td><td>Dudas y cierre</td></tr>
+        </tbody>
+      </table>
+
+      <p class="nota-horario">
+        El reparto interno entre teoría y práctica es orientativo y lo ajusta
+        cada ponente. La hora de inicio y de fin son fijas.
+      </p>
+
+      <h2>Acceso a la sesión</h2>
+
+      <p>
+        La clase se imparte por {{ c.videoconferencia }} y se entra
+        <strong>desde Classroom</strong>, en el apartado de esta sesión. El enlace no se publica en esta web: así solo accede quien está
+        inscrito. Conéctate unos minutos antes de las {{ c.hora_inicio }}.
+      </p>
+
+      {% if c.classroom_url and c.classroom_url != '' %}
+      <p>
+        <a href="{{ c.classroom_url }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          Ir a Classroom
+        </a>
+      </p>
+      {% else %}
+      <p class="notice notice--pending">
+        La clase de Classroom se abrirá antes del comienzo del curso. Las
+        personas admitidas recibirán la invitación por correo electrónico.
+      </p>
+      {% endif %}
+
+      <h2>Materiales</h2>
+
+      <p>
+        Las diapositivas, los cuadernos de prácticas y los datos de ejemplo se
+        publican en Classroom, en el apartado de esta sesión. El material de
+        acceso abierto se publica además en este repositorio, para que siga
+        disponible cuando la clase se cierre:
+      </p>
+
+      <ul>
+        <li><a href="{{ c.repo_url }}/tree/main/materials/sesion{{ s.num }}">Materiales de la sesión {{ s.num }}</a></li>
+      </ul>
+
+      {{ content }}
+
+      <nav class="sesion-prevnext" aria-label="Sesión anterior y siguiente">
+        {% assign prev_num = s.num | minus: 1 %}
+        {% assign next_num = s.num | plus: 1 %}
+        {% assign prev = site.data.sesiones | where: "num", prev_num | first %}
+        {% assign next = site.data.sesiones | where: "num", next_num | first %}
+        {% if prev %}
+        <a href="{{ site.baseurl }}/sesion{{ prev.num }}/" class="sesion-prev">← Sesión {{ prev.num }}: {{ prev.tema }}</a>
+        {% endif %}
+        {% if next %}
+        <a href="{{ site.baseurl }}/sesion{{ next.num }}/" class="sesion-next">Sesión {{ next.num }}: {{ next.tema }} →</a>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</article>

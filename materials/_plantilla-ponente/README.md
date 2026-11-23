@@ -43,7 +43,7 @@ datos/         Datos de ejemplo pequeños, o instrucciones de descarga
 
 Si los datos son demasiado grandes para GitHub, enlázalos aquí:
 
-- **Descarga:** [URL en el Aula Virtual / Zenodo / servidor]
+- **Descarga:** [URL en Classroom / Zenodo / servidor de prácticas]
 - **Tamaño:** [p. ej. 1,2 GB]
 - **Checksum (sha256):** `[...]`
 
