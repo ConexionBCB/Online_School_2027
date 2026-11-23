@@ -89,6 +89,45 @@ GitHub Pages construye el sitio automáticamente al hacer push a `main`. En
 Si el repositorio se renombra, hay que actualizar `baseurl` en `_config.yml` para
 que coincida, o los enlaces y los estilos se romperán.
 
+### Usar un dominio propio (p. ej. `escuela-bcb.org`)
+
+Si se compra un dominio para la cuenta de Google del curso, **el mismo dominio
+puede servir esta web**, que pasaría de
+`conexionbcb.github.io/Winter_School_2027/` a `escuela-bcb.org`. GitHub Pages
+admite dominios propios con HTTPS sin coste. Pasos:
+
+1. **En el repositorio:** crear un fichero `CNAME` en la raíz cuyo único
+   contenido sea el dominio, sin `https://` ni barra final:
+
+   ```
+   escuela-bcb.org
+   ```
+
+2. **En el DNS del dominio**, añadir los registros que indica GitHub en
+   *Settings › Pages › Custom domain*. Para un dominio raíz son cuatro
+   registros `A` a las IP de GitHub Pages (y/o `AAAA` para IPv6); para un
+   subdominio tipo `escuela.cragenomica.es`, un único `CNAME` a
+   `conexionbcb.github.io`. **Copiar los valores de la propia página de GitHub**,
+   que es la fuente al día.
+
+3. **En `_config.yml`**, cambiar las dos claves:
+
+   ```yaml
+   baseurl: ""                       # el sitio pasa a estar en la raíz
+   url: "https://escuela-bcb.org"
+   ```
+
+   Este paso es imprescindible: con `baseurl` apuntando a
+   `/Winter_School_2027`, todos los enlaces y los estilos quedarían rotos en el
+   dominio nuevo.
+
+4. En *Settings › Pages*, marcar **Enforce HTTPS** cuando GitHub haya emitido el
+   certificado (tarda unos minutos).
+
+> El dominio de GitHub (`conexionbcb.github.io`) **no** sirve para verificar una
+> cuenta de Google Workspace: es un subdominio de GitHub, no vuestro, y no se
+> pueden añadir registros DNS en él.
+
 ## Licencia
 
 <!-- TODO (organización): elegir licencia. Sugerencia: CC BY 4.0 para los
