@@ -48,8 +48,12 @@ curso:
   # Matrícula -----------------------------------------------------------------
   # Al ser en línea no hay alojamiento ni manutención, así que el precio de la
   # edición de verano (500 €) no sirve de referencia.
-  precio: "[TBC]"                            # p.ej. "150 €"
-  precio_socios: "[TBC]"                     # precio final para socias/os SEBiBC
+  precio: "200 €"
+  # Descuento para socias/os de la SEBiBC. En la edición de verano fue de 25 €.
+  # Mientras estos dos campos estén en "[TBC]", la frase del descuento NO se
+  # muestra en la web: así no se publica una cifra sin confirmar.
+  # Para activarla, rellena LOS DOS.
+  precio_socios: "[TBC]"                     # p.ej. "175 €"
   descuento_socios: "[TBC]"                  # p.ej. "25 €"
 
   # Plazos --------------------------------------------------------------------
@@ -63,7 +67,6 @@ curso:
   # "Classroom" muestra un aviso de "próximamente" en lugar del botón.
   # El acceso es por invitación: el código de la clase NO se publica en la web.
   classroom_url: ""
-  classroom_nombre: "Google Classroom de la Escuela de Invierno"
 
   # Videoconferencia: Google Meet ---------------------------------------------
   # Las clases se imparten con el enlace de Meet propio de la clase, al que se
@@ -71,7 +74,7 @@ curso:
   videoconferencia: "Google Meet"
   # ¿Se graban las sesiones? Afecta al consentimiento que hay que pedir en la
   # preinscripción. Valores: "sí", "no", "[TBC]"
-  grabaciones: "[TBC]"
+  grabaciones: "no"
 
   # Contacto ------------------------------------------------------------------
   email: "conexion-bcb@csic.es"

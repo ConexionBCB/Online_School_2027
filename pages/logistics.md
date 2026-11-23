@@ -41,10 +41,10 @@ persona durante los ejercicios.
 ## Matrícula
 
 - **Precio:** {{ c.precio }} por persona.
-- **Descuento socios SEBiBC:** {{ c.descuento_socios }} de descuento para personas socias de la
+{% if c.descuento_socios != '[TBC]' and c.descuento_socios != '' %}- **Descuento socios SEBiBC:** {{ c.descuento_socios }} de descuento para personas socias de la
   [Sociedad Española de Bioinformática y Biología Computacional (SEBiBC)](https://www.sebibc.es/)
   (precio final {{ c.precio_socios }}).
-- La matrícula incluye:
+{% endif %}- La matrícula incluye:
   - Acceso a las siete sesiones en directo.
   - Acceso a [Classroom]({{ site.baseurl }}/classroom/) con todo el material docente.
   - Acceso al entorno donde se realizan las sesiones prácticas.
@@ -64,10 +64,10 @@ El formulario de preinscripción se publicará próximamente en esta página. El
 plazo se cerrará el **{{ c.preinscripcion_cierre }}**.
 {% endif %}
 
-En el formulario se te pedirá la dirección de la **cuenta de Google** que usarás
-en el curso: es la que recibirá la invitación a Classroom. Conviene leer la
-[página de Classroom]({{ site.baseurl }}/classroom/#como-se-accede) antes de
-rellenarlo.
+En el formulario se te pedirá la dirección de la **cuenta de Google personal**
+que usarás en el curso: es la que recibirá la invitación a Classroom. Conviene
+leer la [página de Classroom]({{ site.baseurl }}/classroom/#como-se-accede)
+antes de rellenarlo, porque la cuenta institucional puede no servir.
 
 ## Requisitos técnicos
 {: #requisitos-tecnicos }
@@ -76,7 +76,7 @@ Lo que necesitas para seguir el curso:
 
 | | Mínimo | Recomendado |
 |---|---|---|
-| Cuenta | **Una cuenta de Google** (obligatorio para Classroom y Meet) | La misma que uses a diario |
+| Cuenta | **Una cuenta de Google** (obligatorio para Classroom y Meet) | **Una cuenta personal de Gmail** (ver nota abajo) |
 | Conexión | 5 Mbps de bajada / 2 de subida | 20 Mbps, por cable antes que por wifi |
 | Navegador | Chrome, Firefox, Edge o Safari actualizados | Chrome o Firefox al día |
 | Audio | Auriculares con micrófono | Auriculares con micrófono (evitan el eco) |
@@ -85,10 +85,14 @@ Lo que necesitas para seguir el curso:
 
 Tres puntos que marcan la diferencia:
 
-- **Necesitas una cuenta de Google.** Classroom y Meet no funcionan sin ella. No
-  hace falta que sea un Gmail: se puede crear una cuenta de Google con cualquier
-  dirección de correo. Si tu institución usa Google Workspace, tu cuenta
-  institucional ya sirve.
+- **Necesitas una cuenta de Google, y conviene que sea personal.** Classroom y
+  Meet no funcionan sin ella. Usa preferentemente **un Gmail personal**: Google
+  Classroom restringe qué tipos de cuenta pueden unirse a qué clases, y una
+  cuenta corporativa o universitaria gestionada con Google puede quedar
+  bloqueada. No hace falta que sea `@gmail.com` —se puede crear una cuenta de
+  Google personal con cualquier dirección—, pero si tu institución ya gestiona
+  su correo con Google, esa dirección no sirve para esto. Más detalle en la
+  [página de Classroom]({{ site.baseurl }}/classroom/#como-se-accede).
 - **Usa auriculares.** El altavoz del portátil provoca eco y obliga a silenciar
   a todo el mundo, lo que mata las preguntas.
 - **Dos pantallas, o un segundo dispositivo.** Las sesiones prácticas consisten

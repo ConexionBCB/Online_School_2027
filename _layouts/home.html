@@ -25,10 +25,10 @@ layout: default
       <p style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
         Matrícula de <strong>{{ c.precio }} por persona</strong>, que incluye el acceso a
         las siete sesiones en directo, al material docente y al entorno de prácticas.
-        Las personas socias de la
+        {% if c.descuento_socios != '[TBC]' and c.descuento_socios != '' %}Las personas socias de la
         <a href="https://www.sebibc.es/" target="_blank" rel="noopener noreferrer">SEBiBC</a>
-        tienen un descuento de {{ c.descuento_socios }}. Consulta más detalles
-        en la sección de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
+        tienen un descuento de {{ c.descuento_socios }}.{% endif %}
+        Consulta más detalles en la sección de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
       </p>
       <p style="margin-top: 0; margin-bottom: var(--space-md);">
         <strong>Preinscripción</strong> abierta hasta el <strong>{{ c.preinscripcion_cierre }}</strong>.

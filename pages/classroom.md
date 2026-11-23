@@ -41,13 +41,28 @@ Google**:
 3. A partir de ahí, la clase aparece en [classroom.google.com](https://classroom.google.com/)
    cada vez que inicies sesión.
 
-> **Importante:** en la preinscripción se te pedirá la dirección de la **cuenta
-> de Google** que vas a usar en el curso. Puede ser un Gmail o la cuenta de tu
-> institución si esta usa Google Workspace. Si tu correo de trabajo no es una
-> cuenta de Google, indica una que sí lo sea, o crea una cuenta de Google
-> gratuita con tu dirección habitual. La invitación solo funciona en una cuenta
-> de Google, así que una dirección equivocada aquí es el motivo más frecuente de
-> no poder entrar el primer día.
+> **Importante: usa una cuenta de Google personal, no la de tu institución.**
+>
+> En la preinscripción se te pedirá la dirección de la cuenta de Google con la
+> que seguirás el curso. Lo más sencillo y seguro es **una cuenta de Gmail
+> personal**.
+>
+> El motivo es técnico: Google Classroom restringe qué tipos de cuenta pueden
+> unirse a qué clases. Si usas la cuenta corporativa o universitaria de una
+> institución que gestiona su correo con Google, es muy posible que la
+> invitación **no funcione**, y resolverlo requeriría que el servicio de
+> informática de tu institución y el nuestro se autorizaran mutuamente. Con una
+> cuenta personal no hay ningún problema.
+>
+> No hace falta que sea una dirección `@gmail.com`: también puedes crear una
+> cuenta de Google personal **usando tu dirección de correo habitual**, en la
+> pantalla de creación de cuenta eligiendo *Para uso personal* → *Usar tu
+> correo electrónico actual*. Eso sí: si tu institución ya gestiona su correo
+> con Google, esa dirección ya es una cuenta de Google y no se puede volver a
+> registrar; en ese caso, usa un Gmail.
+>
+> Una dirección equivocada aquí es el motivo más frecuente de no poder entrar el
+> primer día.
 
 El código de la clase **no se publica en esta web**, y por una razón concreta:
 las plazas son limitadas y las sesiones son para quien está inscrito.
