@@ -103,11 +103,11 @@ Un apartado por sesión, cada uno con:
 - **Cuadernos de prácticas** (Jupyter, R Markdown, Quarto) y scripts.
 - **Datos de ejemplo**, o instrucciones para acceder a ellos.
 - **Espacio de dudas** de la sesión.
-- **Tareas**, cuando la sesión tenga actividad evaluable.
+- **Tareas**, si la sesión propone algún ejercicio.
 
 Y un apartado general con la guía de bienvenida, los horarios con zona horaria,
-la prueba técnica, el contacto para incidencias, la **entrega del mini‑syllabus**
-para el reconocimiento de créditos ECTS y la encuesta final.
+la prueba técnica, el contacto para incidencias, el certificado de asistencia y
+la encuesta final.
 
 ## Requisitos técnicos
 

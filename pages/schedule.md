@@ -56,14 +56,6 @@ Las siete sesiones siguen la misma estructura:
 El reparto interno entre teoría y práctica lo ajusta cada ponente; la hora de
 inicio y de fin son fijas.
 
-## Actividad para reconocimiento de ECTS
-
-A lo largo del curso, cada participante podrá preparar un **syllabus breve**
-sobre uno de los temas tratados. Esta actividad es necesaria para la
-**obtención de créditos ECTS**. Los criterios de evaluación y la plantilla se
-explican en la primera sesión, y la entrega se realiza en
-[Classroom]({{ site.baseurl }}/classroom/).
-
 ## Dónde está todo
 
 Las clases en directo y todo el material se encuentran en

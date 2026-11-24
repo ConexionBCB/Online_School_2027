@@ -13,6 +13,18 @@ Thumbs.db
 .idea/
 .vscode/
 
+# DATOS PERSONALES: las respuestas del formulario de preinscripción contienen
+# nombres, correos, instituciones y cartas de motivación. Este repositorio es
+# PÚBLICO: no deben subirse nunca.
+*.xlsx
+*.xls
+*.csv
+*.tsv
+respuestas*
+inscripciones*
+candidatos*
+evaluacion*
+
 # Datos pesados: no subir al repositorio (ver CONTRIBUTING.md)
 *.bam
 *.cram

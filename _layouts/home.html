@@ -31,7 +31,11 @@ layout: default
         Consulta más detalles en la sección de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
       </p>
       <p style="margin-top: 0; margin-bottom: var(--space-md);">
+        {% if c.preinscripcion_cierre != '[TBC]' and c.preinscripcion_cierre != '' -%}
         <strong>Preinscripción</strong> abierta hasta el <strong>{{ c.preinscripcion_cierre }}</strong>.
+        {%- else -%}
+        El plazo de <strong>preinscripción</strong> se anunciará en esta página.
+        {%- endif %}
       </p>
       {% if c.preinscripcion_url and c.preinscripcion_url != '' %}
       <a href="{{ c.preinscripcion_url }}" class="btn btn-secondary btn-preinscripcion" target="_blank" rel="noopener noreferrer">

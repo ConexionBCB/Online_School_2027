@@ -57,7 +57,10 @@ curso:
   descuento_socios: "[TBC]"                  # p.ej. "25 €"
 
   # Plazos --------------------------------------------------------------------
-  preinscripcion_cierre: "31 de enero de 2027"
+  # Fecha de cierre del plazo. Mientras esté en "[TBC]" el sitio NO publica
+  # ninguna fecha: dice que se anunciará. La fecha prevista era el 31 de enero
+  # de 2027; ponla aquí cuando sea oficial.
+  preinscripcion_cierre: "[TBC]"
   # Deja `preinscripcion_url` VACÍO hasta que el formulario esté activo: el
   # botón de preinscripción se oculta y no se publica un enlace roto.
   preinscripcion_url: ""

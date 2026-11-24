@@ -18,7 +18,7 @@ Tu sesión y tu fecha están en el [programa](https://conexionbcb.github.io/Wint
 | Diapositivas, guiones de prácticas, cuadernos, scripts de acceso abierto | **Classroom** y, si son abiertos, **este repositorio** | Classroom para el grupo; el repositorio para que siga disponible después |
 | Datos de ejemplo grandes (> 50 MB) | **Classroom / Drive**, o Zenodo | GitHub rechaza ficheros grandes |
 | Material con licencia restrictiva o de terceros | **Solo Classroom** | Acceso limitado a personas inscritas |
-| Tareas evaluables, dudas, notas | **Classroom** | Necesita identificación y seguimiento |
+| Ejercicios, dudas, comentarios | **Classroom** | Necesita identificación y seguimiento |
 | Datos personales o sensibles | **Classroom**, nunca en el repositorio | Un repositorio público no es el sitio |
 
 La regla breve: **Classroom es el aula; el repositorio es el archivo.** Lo que
@@ -39,7 +39,8 @@ organización.
 3. En **Trabajo de clase**, usa **Crear** para añadir:
    - **Material** — diapositivas, PDF, cuadernos, enlaces. Es lo que usarás casi
      siempre.
-   - **Tarea** — si tu sesión tiene entrega evaluable (con fecha límite).
+   - **Tarea** — si quieres proponer un ejercicio con fecha límite. No hay
+     evaluación obligatoria en el curso: úsala solo si te resulta útil.
    - **Pregunta** — para una consulta rápida al grupo.
 4. Asigna cada elemento al **tema** de tu sesión, para que no aparezca suelto.
 5. Puedes **programar** la publicación: así dejas el material preparado con

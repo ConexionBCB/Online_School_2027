@@ -19,5 +19,5 @@ sesion2/
 Para añadir material, consulta la [guía del profesorado](../../CONTRIBUTING.md)
 y parte de la [plantilla de ponente](../_plantilla-ponente/README.md).
 
-Las tareas evaluables, los espacios de dudas y los datos de gran tamaño no van
+Las actividades, los espacios de dudas y los datos de gran tamaño no van
 aquí, sino en Google Classroom.

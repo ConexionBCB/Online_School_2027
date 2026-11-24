@@ -53,15 +53,15 @@ persona durante los ejercicios.
 ## Preinscripción
 
 {% if c.preinscripcion_url and c.preinscripcion_url != '' %}
-La preinscripción se realiza mediante un formulario de Google y está abierta
-hasta el **{{ c.preinscripcion_cierre }}**.
+La preinscripción se realiza mediante un formulario de Google{% if c.preinscripcion_cierre != '[TBC]' and c.preinscripcion_cierre != '' %} y está abierta
+hasta el **{{ c.preinscripcion_cierre }}**{% endif %}.
 
 <p style="margin-top: var(--space-lg);">
   <a href="{{ c.preinscripcion_url }}" class="btn btn-secondary btn-preinscripcion" target="_blank" rel="noopener noreferrer">Formulario de preinscripción</a>
 </p>
 {% else %}
-El formulario de preinscripción se publicará próximamente en esta página. El
-plazo se cerrará el **{{ c.preinscripcion_cierre }}**.
+El formulario de preinscripción se publicará próximamente en esta página,
+junto con las fechas del plazo.
 {% endif %}
 
 En el formulario se te pedirá la dirección de la **cuenta de Google personal**
@@ -110,20 +110,10 @@ en Classroom para comprobar cámara, micrófono y acceso. Dedícale cinco minuto
   y quieren profundizar en temas avanzados. Resulta especialmente útil para
   quienes preparan o imparten docencia en estas áreas.
 
-## Reconocimiento de créditos ECTS
+## Certificado
 
-La Escuela de Invierno ofrece la posibilidad de reconocimiento de **créditos
-ECTS**. Para ello, las personas participantes deberán:
-
-- Asistir a las sesiones del curso.
-- Elaborar y entregar un **syllabus breve** sobre uno de los temas tratados,
-  siguiendo la plantilla y los criterios explicados en la primera sesión.
-
-La entrega se realiza a través de [Classroom]({{ site.baseurl }}/classroom/) y
-podrá hacerse hasta **dos semanas después** de la última sesión.
-
-La información detallada sobre número de créditos y procedimiento administrativo
-se comunicará antes del inicio del curso.
+Las personas que sigan el curso reciben un **certificado de asistencia**, que se
+emite después de la última sesión.
 
 ## Contacto
 
