@@ -1,5 +1,5 @@
 # =============================================================================
-# Equipo organizador de la Escuela de Invierno 2027
+# Equipo organizador de la Escuela Online 2027
 # =============================================================================
 # Campos: nombre, rol, afiliación, foto (en assets/img/organizadores/),
 #         web (opcional). OJO: la clave es `afiliacion`, SIN tilde: Liquid no

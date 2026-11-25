@@ -1,13 +1,13 @@
-# Escuela de Invierno en Bioinformática Avanzada 2027
+# Escuela Online en Bioinformática Avanzada 2027
 
-Sitio web y materiales de la Escuela de Invierno organizada por la Conexión de
+Sitio web y materiales de la Escuela Online organizada por la Conexión de
 Biología Computacional y Bioinformática del CSIC.
 
 **Edición 100 % en línea**, con un máximo de 30 participantes. Siete sesiones,
 martes y jueves de 15:00 a 18:30 (CET), del 9 de marzo al 6 de abril de 2027.
 Las clases se imparten por **Google Meet** y se entra desde **Google Classroom**.
 
-Sitio publicado: https://conexionbcb.github.io/Winter_School_2027/
+Sitio publicado: https://conexionbcb.github.io/Online_School_2027/
 
 Este repositorio parte de la [Escuela de Verano 2026](https://github.com/ConexionBCB/Summer_School_2026).
 
@@ -79,7 +79,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Y abrir http://localhost:4000/Winter_School_2027/
+Y abrir http://localhost:4000/Online_School_2027/
 
 ## Publicación
 
@@ -93,7 +93,7 @@ que coincida, o los enlaces y los estilos se romperán.
 
 Si se compra un dominio para la cuenta de Google del curso, **el mismo dominio
 puede servir esta web**, que pasaría de
-`conexionbcb.github.io/Winter_School_2027/` a `escuela-bcb.org`. GitHub Pages
+`conexionbcb.github.io/Online_School_2027/` a `escuela-bcb.org`. GitHub Pages
 admite dominios propios con HTTPS sin coste. Pasos:
 
 1. **En el repositorio:** crear un fichero `CNAME` en la raíz cuyo único
@@ -118,7 +118,7 @@ admite dominios propios con HTTPS sin coste. Pasos:
    ```
 
    Este paso es imprescindible: con `baseurl` apuntando a
-   `/Winter_School_2027`, todos los enlaces y los estilos quedarían rotos en el
+   `/Online_School_2027`, todos los enlaces y los estilos quedarían rotos en el
    dominio nuevo.
 
 4. En *Settings › Pages*, marcar **Enforce HTTPS** cuando GitHub haya emitido el

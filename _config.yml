@@ -1,5 +1,5 @@
 # =============================================================================
-# Escuela de Invierno en Bioinformática Avanzada 2027
+# Escuela Online en Bioinformática Avanzada 2027
 # =============================================================================
 # EDITA ESTE FICHERO PRIMERO. Los valores del bloque `curso:` se usan en varias
 # páginas a la vez (inicio, programa, logística, pie de página), así que
@@ -12,11 +12,11 @@
 #     grep -rn "TBC" --exclude-dir=.git .
 # =============================================================================
 
-title: "Escuela de Invierno en Bioinformática Avanzada 2027"
+title: "Escuela Online en Bioinformática Avanzada 2027"
 description: "Curso avanzado de bioinformática 100 % en línea sobre métodos modernos de análisis de datos, pensado para profesionales y estudiantes que quieren actualizarse y, en particular, para docentes que deseen renovar sus asignaturas."
 
 # IMPORTANTE: `baseurl` debe coincidir con el nombre del repositorio en GitHub.
-baseurl: "/Winter_School_2027"
+baseurl: "/Online_School_2027"
 url: "https://conexionbcb.github.io"
 
 # -----------------------------------------------------------------------------
@@ -26,7 +26,7 @@ curso:
   # URL del repositorio en GitHub. Se usa para enlazar las carpetas de
   # materiales y la guía del profesorado.
   # ¡Actualízala si mueves el repositorio a otra cuenta u organización!
-  repo_url: "https://github.com/ConexionBCB/Winter_School_2027"
+  repo_url: "https://github.com/ConexionBCB/Online_School_2027"
 
   # Formato -------------------------------------------------------------------
   modalidad: "100 % en línea"
@@ -57,13 +57,10 @@ curso:
   descuento_socios: "[TBC]"                  # p.ej. "25 €"
 
   # Plazos --------------------------------------------------------------------
-  # Fecha de cierre del plazo. Mientras esté en "[TBC]" el sitio NO publica
-  # ninguna fecha: dice que se anunciará. La fecha prevista era el 31 de enero
-  # de 2027; ponla aquí cuando sea oficial.
-  preinscripcion_cierre: "[TBC]"
-  # Deja `preinscripcion_url` VACÍO hasta que el formulario esté activo: el
-  # botón de preinscripción se oculta y no se publica un enlace roto.
-  preinscripcion_url: ""
+  # Fecha de cierre del plazo (oficial).
+  preinscripcion_cierre: "15 de diciembre de 2026"
+  # Formulario de preinscripción, ya activo y aceptando respuestas.
+  preinscripcion_url: "https://docs.google.com/forms/d/e/1FAIpQLSdLFWihvO22MZl9HiiC7UuI1bxewIEg-_3_UCoHmnf1vG8u7g/viewform"
 
   # Aula del curso: Google Classroom --------------------------------------------
   # Deja vacío hasta que la clase esté creada. Mientras esté vacío, la página

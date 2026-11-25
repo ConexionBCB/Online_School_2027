@@ -1,7 +1,7 @@
 # Guía para el profesorado
 
 Esta guía explica **dónde va cada cosa**, **cómo subir tu material** y **cómo dar
-tu sesión en línea** en la Escuela de Invierno en Bioinformática Avanzada 2027.
+tu sesión en línea** en la Escuela Online en Bioinformática Avanzada 2027.
 
 > **Esta edición es 100 % en línea**, a través de **Google Classroom** y **Google
 > Meet**, con un grupo de **30 participantes como máximo**. Cada sesión es de
@@ -9,7 +9,7 @@ tu sesión en línea** en la Escuela de Invierno en Bioinformática Avanzada 202
 > que conviene preparar de forma distinta a una clase presencial; si solo vas a
 > leer una sección, que sea esa.
 
-Tu sesión y tu fecha están en el [programa](https://conexionbcb.github.io/Winter_School_2027/schedule/).
+Tu sesión y tu fecha están en el [programa](https://conexionbcb.github.io/Online_School_2027/schedule/).
 
 ## Dónde va cada cosa
 
@@ -99,8 +99,8 @@ Si no tienes permiso de escritura, GitHub te ofrecerá crear un *fork* y una
 **Opción B — con git:**
 
 ```bash
-git clone https://github.com/ConexionBCB/Winter_School_2027.git
-cd Winter_School_2027
+git clone https://github.com/ConexionBCB/Online_School_2027.git
+cd Online_School_2027
 
 git checkout -b material-apellido
 mkdir -p materials/sesion2/apellido-tema
@@ -214,7 +214,7 @@ la organización **con un mes de antelación**, indicando:
 - Recursos: memoria y CPU aproximados por participante.
 - Datos que haya que precargar y su tamaño.
 
-Escribe a **conexion-bcb@csic.es** con el asunto `[Escuela Invierno 2027] Software`.
+Escribe a **conexion-bcb@csic.es** con el asunto `[Escuela Online 2027] Software`.
 
 ---
 
