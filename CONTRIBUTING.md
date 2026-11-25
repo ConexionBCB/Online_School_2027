@@ -9,7 +9,7 @@ tu sesión en línea** en la Escuela Online en Bioinformática Avanzada 2027.
 > que conviene preparar de forma distinta a una clase presencial; si solo vas a
 > leer una sección, que sea esa.
 
-Tu sesión y tu fecha están en el [programa](https://conexionbcb.github.io/Online_School_2027/schedule/).
+Tu sesión y tu fecha están en el [programa](https://iandreu.github.io/Online_School_2027/schedule/).
 
 ## Dónde va cada cosa
 
@@ -99,7 +99,7 @@ Si no tienes permiso de escritura, GitHub te ofrecerá crear un *fork* y una
 **Opción B — con git:**
 
 ```bash
-git clone https://github.com/ConexionBCB/Online_School_2027.git
+git clone https://github.com/IAndreu/Online_School_2027.git
 cd Online_School_2027
 
 git checkout -b material-apellido
