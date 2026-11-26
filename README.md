@@ -7,13 +7,7 @@ Biología Computacional y Bioinformática del CSIC.
 martes y jueves de 15:00 a 18:30 (CET), del 9 de marzo al 6 de abril de 2027.
 Las clases se imparten por **Google Meet** y se entra desde **Google Classroom**.
 
-Sitio publicado (provisional): https://iandreu.github.io/Online_School_2027/
-
-> **El repositorio está alojado temporalmente en la cuenta `IAndreu`.** El
-> destino final es la organización `ConexionBCB`, a la espera de permisos.
-> Cuando se transfiera, hay que cambiar **cuatro líneas** (ver más abajo:
-> «Después de transferir a ConexionBCB»); el nombre del repositorio no cambia,
-> así que `baseurl` se queda como está.
+Sitio publicado: https://conexionbcb.github.io/Online_School_2027/
 
 Este repositorio parte de la [Escuela de Verano 2026](https://github.com/ConexionBCB/Summer_School_2026).
 
@@ -134,35 +128,28 @@ admite dominios propios con HTTPS sin coste. Pasos:
 > cuenta de Google Workspace: es un subdominio de GitHub, no vuestro, y no se
 > pueden añadir registros DNS en él.
 
-## Después de transferir a ConexionBCB
+## Si alguna vez se mueve o se renombra el repositorio
 
-El nombre del repositorio (`Online_School_2027`) no cambia con la transferencia,
-así que **`baseurl` se queda como está**. Solo hay que sustituir `IAndreu` por
-`ConexionBCB` en estos cuatro sitios:
+`baseurl` depende del **nombre** del repositorio y `url` de la **cuenta**, así
+que un cambio de cualquiera de los dos obliga a tocar estas cuatro líneas:
 
-| Fichero | Línea |
+| Fichero | Qué |
 |---|---|
-| `_config.yml` | `url: "https://iandreu.github.io"` → `https://conexionbcb.github.io` |
+| `_config.yml` | `baseurl` (nombre del repositorio) |
+| `_config.yml` | `url` (cuenta de GitHub) |
 | `_config.yml` | `curso.repo_url` |
-| `CONTRIBUTING.md` | el enlace al programa |
-| `CONTRIBUTING.md` | el `git clone` del apartado de subir material |
+| `CONTRIBUTING.md` | el enlace al programa y el `git clone` |
 
 Para localizarlas:
 
 ```bash
-grep -rni "iandreu" --exclude-dir=.git .
-```
-
-Y actualizar el remoto local:
-
-```bash
-git remote set-url origin https://github.com/ConexionBCB/Online_School_2027.git
+grep -rni "conexionbcb\|Online_School_2027" --exclude-dir=.git .
 ```
 
 Ojo: GitHub redirige los repositorios transferidos, pero **no** las páginas
-publicadas de una cuenta a otra. La dirección de la web cambiará de
-`iandreu.github.io/Online_School_2027/` a
-`conexionbcb.github.io/Online_School_2027/`.
+publicadas de una cuenta a otra. La dirección
+`iandreu.github.io/Online_School_2027/`, usada mientras el repositorio estuvo en
+una cuenta personal, **ya no funciona**.
 
 ## Licencia
 

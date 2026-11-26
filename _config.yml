@@ -17,9 +17,7 @@ description: "Curso avanzado de bioinformática 100 % en línea sobre métodos m
 
 # IMPORTANTE: `baseurl` debe coincidir con el nombre del repositorio en GitHub.
 baseurl: "/Online_School_2027"
-# PROVISIONAL: mientras el repositorio esté en la cuenta IAndreu.
-# Al transferirlo a ConexionBCB, cambiar por "https://conexionbcb.github.io".
-url: "https://iandreu.github.io"
+url: "https://conexionbcb.github.io"
 
 # -----------------------------------------------------------------------------
 # Datos del curso
@@ -28,10 +26,9 @@ curso:
   # URL del repositorio en GitHub. Se usa para enlazar las carpetas de
   # materiales y la guía del profesorado.
   # ¡Actualízala si mueves el repositorio a otra cuenta u organización!
-  # PROVISIONAL: al transferir el repositorio a ConexionBCB, cambiar
-  # "IAndreu" por "ConexionBCB" en esta línea. De aquí salen los enlaces
-  # a las carpetas de materiales y a la guía del profesorado.
-  repo_url: "https://github.com/IAndreu/Online_School_2027"
+  # De aquí salen los enlaces a las carpetas de materiales y a la guía del
+  # profesorado. ¡Actualízala si mueves el repositorio otra vez!
+  repo_url: "https://github.com/ConexionBCB/Online_School_2027"
 
   # Formato -------------------------------------------------------------------
   modalidad: "100 % en línea"
