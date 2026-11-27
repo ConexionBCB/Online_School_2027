@@ -62,7 +62,10 @@ curso:
   # Fecha de cierre del plazo (oficial).
   preinscripcion_cierre: "15 de diciembre de 2026"
   # Formulario de preinscripción, ya activo y aceptando respuestas.
-  preinscripcion_url: "https://docs.google.com/forms/d/e/1FAIpQLSdLFWihvO22MZl9HiiC7UuI1bxewIEg-_3_UCoHmnf1vG8u7g/viewform"
+  # Alojado en SACO (https://saco.csic.es), el servicio de nube del CSIC.
+  # Para cambiarlo de plataforma basta con sustituir esta URL: las páginas no
+  # nombran el servicio, así que no hay que tocar nada más.
+  preinscripcion_url: "https://saco.csic.es/apps/forms/s/WCtaYcfKjgtQKpBNJNw38HiW"
 
   # Aula del curso: Google Classroom --------------------------------------------
   # Deja vacío hasta que la clase esté creada. Mientras esté vacío, la página

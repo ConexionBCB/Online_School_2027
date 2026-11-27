@@ -53,7 +53,8 @@ persona durante los ejercicios.
 ## Preinscripción
 
 {% if c.preinscripcion_url and c.preinscripcion_url != '' %}
-La preinscripción se realiza mediante un formulario de Google{% if c.preinscripcion_cierre != '[TBC]' and c.preinscripcion_cierre != '' %} y está abierta
+La preinscripción se realiza mediante un formulario en línea alojado en los
+servicios del CSIC{% if c.preinscripcion_cierre != '[TBC]' and c.preinscripcion_cierre != '' %} y está abierta
 hasta el **{{ c.preinscripcion_cierre }}**{% endif %}.
 
 <p style="margin-top: var(--space-lg);">
